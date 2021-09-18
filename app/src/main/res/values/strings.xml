@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">AndroidCourse</string>
+    <string name="app_name">FlowerShop</string>
+    <string name="okButton">OK</string>
+    <string name="choose_flower_color">Choose flower color:</string>
+    <string name="blueFlowerColor">Blue</string>
+    <string name="redFlowerColor">Red</string>
+    <string name="yellowFlowerColor">Yellow</string>
+    <string name="priceLabel">Price</string>
+    <string name="minPriceValue">2$</string>
+    <string name="middlePriceValue">5$</string>
+    <string name="maxPriceValue">10$</string>
 </resources>
