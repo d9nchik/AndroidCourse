@@ -9,4 +9,5 @@
     <string name="minPriceValue">2$</string>
     <string name="middlePriceValue">5$</string>
     <string name="maxPriceValue">10$</string>
+    <string name="order_result">Your order is %1$s flower. It will cost you %2$s .</string>
 </resources>
