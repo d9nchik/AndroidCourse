@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Квітковий магазин</string>
+    <string name="okButton">Добре</string>
+    <string name="choose_flower_color">Биберіть колір:</string>
+    <string name="blueFlowerColor">сині</string>
+    <string name="redFlowerColor">червоні</string>
+    <string name="yellowFlowerColor">жовті</string>
+    <string name="priceLabel">Ціна</string>
+    <string name="minPriceValue">25грн.</string>
+    <string name="maxPriceValue">125грн.</string>
+    <string name="middlePriceValue">62грн.</string>
+    <string name="order_result">Ваше замовлення %1$s квітки на імя %2$s. Це коштуватиме %3$s</string>
+    <string name="yourNamePlaceholder">Ваше імʼя</string>
+</resources>

@@ -3,12 +3,13 @@
     <string name="app_name">Цветочный магазин</string>
     <string name="okButton">Хорошо</string>
     <string name="choose_flower_color">Выберите цвет:</string>
-    <string name="blueFlowerColor">Голубой</string>
-    <string name="redFlowerColor">Красный</string>
-    <string name="yellowFlowerColor">Желтый</string>
+    <string name="blueFlowerColor">голубые</string>
+    <string name="redFlowerColor">красные</string>
+    <string name="yellowFlowerColor">желтые</string>
     <string name="priceLabel">Цена</string>
     <string name="minPriceValue">50руб.</string>
     <string name="middlePriceValue">125руб.</string>
     <string name="maxPriceValue">250руб.</string>
-    <string name="order_result">Ваш заказ %1$s цветы. Это будет стоить вам %2$s</string>
+    <string name="order_result">Ваш заказ %1$s цветы на имя %2$s. Цена %3$s</string>
+    <string name="yourNamePlaceholder">Ваше имя</string>
 </resources>
