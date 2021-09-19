@@ -1,9 +1,9 @@
 package com.example.androidcourse
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.RadioButton
+import androidx.appcompat.app.AppCompatActivity
 import com.example.androidcourse.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        colorNumber=  getString(R.string.blueFlowerColor)
+        colorNumber = getString(R.string.blueFlowerColor)
         priceNumber = getString(R.string.minPriceValue)
     }
 
@@ -51,7 +51,12 @@ class MainActivity : AppCompatActivity() {
 
     @Suppress("UNUSED_PARAMETER")
     fun onOkButtonClick(view: View) {
-        binding.textView.text = getString(R.string.order_result, colorNumber, priceNumber)
+        binding.textView.text = getString(
+            R.string.order_result,
+            colorNumber,
+            binding.personNameTextField.text,
+            priceNumber
+        )
     }
 
 }
