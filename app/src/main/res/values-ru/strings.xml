@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Цветочный магазин</string>
+    <string name="okButton">Хорошо</string>
+    <string name="choose_flower_color">Выберите цвет:</string>
+    <string name="blueFlowerColor">Голубой</string>
+    <string name="redFlowerColor">Красный</string>
+    <string name="yellowFlowerColor">Желтый</string>
+    <string name="priceLabel">Цена</string>
+    <string name="minPriceValue">50руб.</string>
+    <string name="middlePriceValue">125руб.</string>
+    <string name="maxPriceValue">250руб.</string>
+    <string name="order_result">Ваш заказ %1$s цветы. Это будет стоить вам %2$s</string>
+</resources>
