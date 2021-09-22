@@ -12,4 +12,5 @@
     <string name="middlePriceValue">62грн.</string>
     <string name="order_result">Ваше замовлення %1$s квітки на імя %2$s. Це коштуватиме %3$s</string>
     <string name="yourNamePlaceholder">Ваше імʼя</string>
+    <string name="notAllFieldsFilledPopup">Заповніть всі поля</string>
 </resources>

@@ -3,6 +3,7 @@ package com.example.androidcourse
 import android.os.Bundle
 import android.view.View
 import android.widget.RadioButton
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.androidcourse.databinding.ActivityMainBinding
 
@@ -51,12 +52,20 @@ class MainActivity : AppCompatActivity() {
 
     @Suppress("UNUSED_PARAMETER")
     fun onOkButtonClick(view: View) {
-        binding.textView.text = getString(
-            R.string.order_result,
-            colorNumber,
-            binding.personNameTextField.text,
-            priceNumber
-        )
+        if (binding.personNameTextField.text.isNotEmpty()
+            && colorNumber.isNotEmpty()
+            && priceNumber.isNotEmpty()
+        ) {
+            binding.textView.text = getString(
+                R.string.order_result,
+                colorNumber,
+                binding.personNameTextField.text,
+                priceNumber
+            )
+        } else {
+            Toast.makeText(this, R.string.notAllFieldsFilledPopup, Toast.LENGTH_LONG).show()
+        }
+
     }
 
 }
