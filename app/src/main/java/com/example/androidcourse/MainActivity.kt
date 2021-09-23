@@ -52,10 +52,7 @@ class MainActivity : AppCompatActivity() {
 
     @Suppress("UNUSED_PARAMETER")
     fun onOkButtonClick(view: View) {
-        if (binding.personNameTextField.text.isNotEmpty()
-            && colorNumber.isNotEmpty()
-            && priceNumber.isNotEmpty()
-        ) {
+        if (binding.personNameTextField.text.isNotEmpty()) {
             binding.textView.text = getString(
                 R.string.order_result,
                 colorNumber,
