@@ -1,17 +1,17 @@
 package com.example.androidcourse
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.setFragmentResult
 import com.example.androidcourse.databinding.FragmentShowOrderBinding
 
 
 class ShowOrder : Fragment() {
     private lateinit var binding: FragmentShowOrderBinding
-    private var inputActivityCallback: InputDataListener? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,25 +22,10 @@ class ShowOrder : Fragment() {
         return binding.root
     }
 
-    interface InputDataListener {
-        fun onButtonClick()
-    }
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        try {
-            inputActivityCallback = context as InputDataListener
-        } catch (e: ClassCastException) {
-            throw ClassCastException(
-                context.toString()
-                        + " must implement InputDataListener"
-            )
-        }
-    }
 
     @Suppress("UNUSED_PARAMETER")
     fun onOkButtonClick(view: View) {
-        inputActivityCallback?.onButtonClick()
+        setFragmentResult("requestKey", bundleOf())
     }
 
     fun setMessage(text: String) {
