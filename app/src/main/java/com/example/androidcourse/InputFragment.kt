@@ -6,12 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
 import androidx.fragment.app.Fragment
+import androidx.room.Room
 import com.example.androidcourse.databinding.FragmentInputBinding
 
 class InputFragment : Fragment() {
     private lateinit var colorNumber: String
     private lateinit var priceNumber: String
     private lateinit var binding: FragmentInputBinding
+    private var orderDb: OrderDao? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,6 +34,14 @@ class InputFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        orderDb = context?.let {
+            Room.databaseBuilder(
+                it,
+                OrderRoomDatabase::class.java, "order_database"
+            ).build()
+        }?.orderDao()
+
         colorNumber = getString(R.string.blueFlowerColor)
         priceNumber = getString(R.string.minPriceValue)
     }
@@ -66,6 +76,15 @@ class InputFragment : Fragment() {
 
     fun getOrderDetails(): String? {
         if (binding.personNameTextField.text.isNotEmpty()) {
+            Thread {
+                orderDb?.insertOrder(
+                    Order(
+                        binding.personNameTextField.text.toString(),
+                        colorNumber,
+                        priceNumber
+                    )
+                )
+            }.start()
             return getString(
                 R.string.order_result,
                 colorNumber,
@@ -74,6 +93,5 @@ class InputFragment : Fragment() {
             )
         }
         return null
-
     }
 }

@@ -13,4 +13,6 @@
     <string name="order_result">Ваш заказ %1$s цветы на имя %2$s. Цена %3$s</string>
     <string name="yourNamePlaceholder">Ваше имя</string>
     <string name="notAllFieldsFilledPopup">Заполните все поля</string>
+    <string name="navigation_button">Заказы</string>
+    <string name="buttonResetRecords">Сбросить</string>
 </resources>
