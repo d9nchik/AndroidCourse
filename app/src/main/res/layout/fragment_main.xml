@@ -7,25 +7,134 @@
     android:layout_height="match_parent"
     tools:context=".MainFragment">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment_input_view"
-        android:name="com.example.androidcourse.InputFragment"
-        android:layout_width="0dp"
+    <Button
+        android:id="@+id/okButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="@string/okButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout="@layout/fragment_input" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment_output_view"
-        android:name="com.example.androidcourse.ShowOrder"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="42dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_input_view"
-        tools:layout="@layout/fragment_show_order" />
+        app:layout_constraintTop_toBottomOf="@+id/okButton" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="236dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="139dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/chooseFlowerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_flower_color" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkedButton="@id/blueFlowerRadioButton">
+
+                <RadioButton
+                    android:id="@+id/blueFlowerRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blueFlowerColor" />
+
+                <RadioButton
+                    android:id="@+id/redFlowerRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/redFlowerColor" />
+
+                <RadioButton
+                    android:id="@+id/yellowRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="@string/yellowFlowerColor" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/priceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/priceLabel" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkedButton="@id/minPriceRadioButton">
+
+                <RadioButton
+                    android:id="@+id/minPriceRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/minPriceValue" />
+
+                <RadioButton
+                    android:id="@+id/middlePriceRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/middlePriceValue" />
+
+                <RadioButton
+                    android:id="@+id/maxPriceValueRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/maxPriceValue" />
+            </RadioGroup>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/personNameTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="56dp"
+        android:autofillHints="AUTOFILL_HINT_PERSON_NAME"
+        android:ems="10"
+        android:hint="@string/yourNamePlaceholder"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/recordsButton"
